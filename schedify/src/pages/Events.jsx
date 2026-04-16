@@ -167,7 +167,7 @@ export default function Events() {
               <div className="flex items-center gap-1.5 bg-blue-50 rounded-xl px-3 py-2 mb-3">
                 <span className="text-xs text-blue-600 truncate flex-1 font-mono">/book/{event.slug}</span>
                 <button
-                  onClick={() => { navigator.clipboard.writeText(`https://finalassignment-2.onrender.com/book/${event.slug}`); showToast('Link copied!', 'success'); }}
+                  onClick={() => { navigator.clipboard.writeText(`https://final-assignment-brown.vercel.app/book/${event.slug}`); showToast('Link copied!', 'success'); }}
                   className="text-blue-500 hover:text-blue-700 flex-shrink-0 text-xs font-medium px-1"
                 >
                   Copy
