@@ -6,9 +6,9 @@ import models.event
 import models.availability
 import models.booking
 
-app = FastAPI()  # ✅ Create app FIRST
+app = FastAPI() 
 
-app.add_middleware(       # ✅ Then add middleware
+app.add_middleware(      
     CORSMiddleware,
     allow_origins=["https://final-assignment-brown.vercel.app"],
     allow_methods=["*"],
