@@ -422,5 +422,51 @@ The system uses **PostgreSQL (Neon DB)** with an optimized schema design.
 
 ---
 
+## Home Page
+<img width="1919" height="1033" alt="image" src="https://github.com/user-attachments/assets/04b9839f-6955-4fa9-80c5-43d3d7a29653" />
+<img width="1919" height="1005" alt="image" src="https://github.com/user-attachments/assets/754644df-c54c-4807-b8bf-ead823f446c8" />
+
+---
+## Event Creation Page
+<img width="1919" height="1016" alt="image" src="https://github.com/user-attachments/assets/ee1fd0a2-64ca-4ce7-b8b9-6b5eea096f2d" />
+
+---
+## Edit event 
+<img width="1901" height="1020" alt="image" src="https://github.com/user-attachments/assets/7e753894-1a0b-46b5-923e-feff214b6341" />
+
+---
+# Create Event
+<img width="1724" height="1006" alt="image" src="https://github.com/user-attachments/assets/af777764-b322-4674-931a-365897c4c55d" />
+
+---
+## Public Booking Page
+<img width="1919" height="1019" alt="image" src="https://github.com/user-attachments/assets/7c11ccf7-e07c-4848-ba29-10e2b35fd2fe" />
+<img width="1919" height="1035" alt="image" src="https://github.com/user-attachments/assets/0b49d310-a129-4af8-9db2-b42a5c71fbd0" />
+
+---
+## Booking Confirmation Page
+<img width="1915" height="1022" alt="image" src="https://github.com/user-attachments/assets/1826e6ea-ad98-4bc2-bf2e-64b4c9babac2" />
+
+---
+## Availability and slot adding page
+<img width="1919" height="1001" alt="image" src="https://github.com/user-attachments/assets/c70ac644-a809-42a8-93ff-6a1a3b21046b" />
+<img width="1899" height="1009" alt="image" src="https://github.com/user-attachments/assets/33bfbaab-0f35-401a-9b5e-4d68a4add491" />
+
+---
+## Separate Booking Page ,Created for future purpose if we will have login system
+<img width="1919" height="1008" alt="image" src="https://github.com/user-attachments/assets/1fb920d6-3bde-45c3-84e0-537fd7263e2b" />
+
+---
+
+## Meeting - upcoming and past with cancel feature
+<img width="1919" height="1006" alt="image" src="https://github.com/user-attachments/assets/393b834f-d046-40b7-8577-75d8ef2bef7a" />
+
+
+
+
+
+
+
+
 
 
