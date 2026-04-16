@@ -10,7 +10,7 @@ app = FastAPI()  # ✅ Create app FIRST
 
 app.add_middleware(       # ✅ Then add middleware
     CORSMiddleware,
-    allow_origins=["http://localhost:3000"],
+    allow_origins=["https://final-assignment-brown.vercel.app/"],
     allow_methods=["*"],
     allow_headers=["*"],
 )
