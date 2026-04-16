@@ -21,7 +21,6 @@ def get_available_slots(db, event_id, date):
 
     slots = []
 
-    # ✅ FIX: use IST timezone
     IST = pytz.timezone('Asia/Kolkata')
     now = datetime.now(IST).replace(second=0, microsecond=0)
 
