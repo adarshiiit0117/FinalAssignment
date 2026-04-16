@@ -4,10 +4,8 @@ from models.availability import Availability
 from datetime import datetime, timedelta
 from datetime import datetime
 
-from models.booking import Booking
-from models.event import Event
-from models.availability import Availability
-from datetime import datetime, timedelta
+
+import pytz
 
 def get_available_slots(db, event_id, date):
     event = db.query(Event).filter(Event.id == event_id).first()
@@ -23,8 +21,9 @@ def get_available_slots(db, event_id, date):
 
     slots = []
 
-    # 🔥 FIX 1: remove seconds for clean comparison
-    now = datetime.now().replace(second=0, microsecond=0)
+    # ✅ FIX: use IST timezone
+    IST = pytz.timezone('Asia/Kolkata')
+    now = datetime.now(IST).replace(second=0, microsecond=0)
 
     for availability in availability_list:
         start = datetime.combine(date, availability.start_time)
@@ -34,7 +33,6 @@ def get_available_slots(db, event_id, date):
 
         while current + timedelta(minutes=duration) <= end:
 
-            # 🔥 FIX 2: unified logic
             if date > now.date():
                 slots.append(current)
 
