@@ -21,7 +21,7 @@ class EventOut(BaseModel):
     id: int
     name: str
     duration: int
-    slug: str   # ✅ OK here
+    slug: str  
 
     class Config:
         orm_mode = True
