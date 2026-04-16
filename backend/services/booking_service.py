@@ -4,13 +4,17 @@ from models.availability import Availability
 from datetime import datetime, timedelta
 from datetime import datetime
 
+from models.booking import Booking
+from models.event import Event
+from models.availability import Availability
+from datetime import datetime, timedelta
+
 def get_available_slots(db, event_id, date):
     event = db.query(Event).filter(Event.id == event_id).first()
     if not event:
         return []
 
     duration = event.duration
-
     day_of_week = date.weekday()
 
     availability_list = db.query(Availability).filter(
@@ -19,7 +23,8 @@ def get_available_slots(db, event_id, date):
 
     slots = []
 
-    now = datetime.now()   # ✅ current time
+    # 🔥 FIX 1: remove seconds for clean comparison
+    now = datetime.now().replace(second=0, microsecond=0)
 
     for availability in availability_list:
         start = datetime.combine(date, availability.start_time)
@@ -29,15 +34,12 @@ def get_available_slots(db, event_id, date):
 
         while current + timedelta(minutes=duration) <= end:
 
-            # ✅ ONLY ADD FUTURE SLOTS
+            # 🔥 FIX 2: unified logic
             if date > now.date():
-                # future date → allow all
                 slots.append(current)
 
-            elif date == now.date():
-                # today → filter past
-                if current > now:
-                    slots.append(current)
+            elif date == now.date() and current > now:
+                slots.append(current)
 
             current += timedelta(minutes=duration)
 
@@ -46,7 +48,7 @@ def get_available_slots(db, event_id, date):
         Booking.event_id == event_id
     ).all()
 
-    booked_times = [b.start_time for b in bookings]
+    booked_times = [b.start_time.replace(second=0, microsecond=0) for b in bookings]
 
     available_slots = [slot for slot in slots if slot not in booked_times]
 
